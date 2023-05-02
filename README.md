@@ -12,8 +12,8 @@ This program will read transaction data out of RBC credit card statements and pu
 
 ## Requirements
 
-- Docker
-- Docker Compose
+- Docker version 23.0.3, build 3e7cbfd
+- docker-compose version 1.27.4, build 40524192 
 
 ## Use
 
