@@ -11,16 +11,12 @@ This program will read transaction data out of RBC credit card statements and pu
 - Exchange Rate
 
 ## Requirements
-- Python 3.8+
-- [PdfMiner](https://github.com/euske/pdfminer)
 
-Ensure `python` is in your PATH.
+- Docker
+- Docker Compose
 
 ## Use
-Drop all PDF statements into the project directory. The program will read all transactions, sort them, and consolidate them into a single .csv file.
 
-### Windows
-Run (double-click) `convert.bat`.
-
-### Linux
-Run `convert.sh` in terminal.
+- Drop all PDF statements into the `/app` directory. The program will read all transactions, sort them, and consolidate them into a single .csv file called transactions.csv.
+- `docker-compose up`
+- You'll see the CSV appear in `/app`.

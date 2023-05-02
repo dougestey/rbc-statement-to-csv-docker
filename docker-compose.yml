@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  rbc_visa:
+    container_name: rbc_visa
+    image: python:3.12.0a7-bullseye
+    command:
+      - bash
+      - -c
+      - >
+        cd app;
+        python3 -m pip install -r requirements.txt;
+        ./convert.sh;
+      # - BOOTSTRAP=true
+      # - STAGING_ENV=false
+      # - APP_URL=$API_URL
+      # - PORT=$API_PORT
+      # - DATABASE_URL=postgres://$DB_USER:$DB_PASSWORD@db:$DB_PORT/$DB_NAME
+      # - REDIS_URL=redis://redis:$REDIS_PORT
+      # - FRONTEND_APP=$FRONTEND_APP
+      # - STRIPE_TRIAL_KEY=fake
+    # environment:
+    volumes:
+      - ./app:/app
